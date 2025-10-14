@@ -38,7 +38,7 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          Full-Stack Developer | UI/UX Enthusiast | Innovator
+          MERN Stack Developer
         </motion.h2>
 
         <motion.p
@@ -47,8 +47,8 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
         >
-          I build modern, scalable, and visually captivating digital experiences using
-          technologies like React, Node.js, and MongoDB.
+          I specialize in building modern, scalable, and visually captivating web applications using the MERN stack — MongoDB, Express, React, and Node.js. 
+          My passion is turning complex problems into seamless digital experiences.
         </motion.p>
 
         <motion.div
