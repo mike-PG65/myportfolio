@@ -13,7 +13,7 @@ const Contact = () => {
   const [status, setStatus] = useState("");
 
   // ✅ Your live backend base URL (replace if needed)
-  const BASE_URL = "http://localhost:4050/api";
+  const BASE_URL = "https://curicullum.onrender.com/api";
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
