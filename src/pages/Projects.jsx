@@ -5,11 +5,12 @@ import { Github, Globe } from "lucide-react";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
+   const BASE_URL = "https://curicullum.onrender.com/api"
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("http://localhost:4050/api/project/list");
+        const res = await axios.get(`${BASE_URL}/project/list`);
         setProjects(res.data);
       } catch (error) {
         console.error("Error fetching projects:", error);
