@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
-import { Github, Globe, Loader2 } from "lucide-react";
+import { Github, Globe } from "lucide-react";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -49,16 +49,17 @@ const Projects = () => {
         Featured Projects
       </motion.h2>
 
-      {/* ✅ Loading State */}
+      {/* ✅ Loading State (same as Education) */}
       {loading ? (
-        <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-4 text-gray-400">
+        <div className="flex flex-col justify-center items-center h-80 space-y-4">
           <motion.div
             animate={{ rotate: 360 }}
-            transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-          >
-            <Loader2 className="w-10 h-10 text-blue-400" />
-          </motion.div>
-          <p className="text-lg animate-pulse">Fetching projects...</p>
+            transition={{ repeat: Infinity, duration: 1.2, ease: "linear" }}
+            className="w-12 h-12 border-4 border-t-transparent border-purple-500 rounded-full shadow-lg shadow-purple-500/30"
+          ></motion.div>
+          <p className="text-gray-400 text-lg font-medium animate-pulse">
+            Loading...
+          </p>
         </div>
       ) : (
         <>
