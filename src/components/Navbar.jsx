@@ -10,10 +10,11 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", to: "/", type: "route" },
     { name: "About", to: "/about", type: "route" },
-    { name: "Skills", to: "skills", type: "scroll" },
+    { name: "Skills", to: "/skills", type: "route" },
     { name: "Projects", to: "/projects", type: "route" },
     { name: "Education", to: "/education", type: "route" },
-    { name: "Contact", to: "contact", type: "scroll" },
+    { name: "Experience", to: "/experience", type: "route" },
+    { name: "Contact", to: "/contact", type: "route" },
   ];
 
   return (

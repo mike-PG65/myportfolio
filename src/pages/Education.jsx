@@ -24,6 +24,13 @@ const Education = () => {
     fetchEducation();
   }, []);
 
+  // Helper function to format month and year
+  const formatDate = (dateString) => {
+    if (!dateString || dateString === "Present") return "Present";
+    const date = new Date(dateString);
+    return date.toLocaleString("default", { month: "short", year: "numeric" }); // e.g. "Jan 2024"
+  };
+
   return (
     <section
       id="education"
@@ -61,9 +68,7 @@ const Education = () => {
       )}
 
       {/* Error State */}
-      {error && (
-        <p className="text-center text-red-400 font-medium">{error}</p>
-      )}
+      {error && <p className="text-center text-red-400 font-medium">{error}</p>}
 
       {/* Timeline */}
       {!loading && !error && educationList.length > 0 && (
@@ -103,13 +108,12 @@ const Education = () => {
                     {edu.fieldOfStudy}
                   </p>
 
+                  {/* 🗓 Duration with month + year */}
                   <div className="flex items-center gap-2 text-gray-400 text-sm mb-1">
                     <Calendar className="w-4 h-4" />
                     <span>
-                      {new Date(edu.startDate).getFullYear()} –{" "}
-                      {edu.endDate && edu.endDate !== "Present"
-                        ? new Date(edu.endDate).getFullYear()
-                        : "Present"}
+                      {formatDate(edu.startDate)} –{" "}
+                      {formatDate(edu.endDate)}
                     </span>
                   </div>
 
