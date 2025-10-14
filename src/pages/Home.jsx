@@ -58,7 +58,7 @@ const Home = () => {
           className="flex justify-center gap-6"
         >
           <Link
-            to="projects"
+            to="/projects"
             smooth={true}
             duration={600}
             offset={-70}
@@ -69,7 +69,7 @@ const Home = () => {
           </Link>
 
           <Link
-            to="contact"
+            to="/contact"
             smooth={true}
             duration={600}
             offset={-70}

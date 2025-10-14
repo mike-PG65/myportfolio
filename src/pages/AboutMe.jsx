@@ -98,7 +98,7 @@ const About = () => {
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <motion.a
               whileHover={{ scale: 1.05 }}
-              href="#projects"
+              href="/projects"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-shadow"
             >
               View My Projects
