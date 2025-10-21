@@ -109,7 +109,7 @@ const Experience = () => {
                       })}{" "}
                       –{" "}
                       {exp.endDate && exp.endDate !== "Present"
-                        ? new Date(exp.enddate).toLocaleString("default", {
+                        ? new Date(exp.endDate).toLocaleString("default", {
                             month: "short",
                             year: "numeric",
                           })
