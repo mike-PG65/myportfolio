@@ -103,12 +103,12 @@ const Experience = () => {
                   <div className="flex items-center gap-2 text-gray-400 text-sm mb-1">
                     <Calendar className="w-4 h-4" />
                     <span>
-                      {new Date(exp.startdate).toLocaleString("default", {
+                      {new Date(exp.startDate).toLocaleString("default", {
                         month: "short",
                         year: "numeric",
                       })}{" "}
                       –{" "}
-                      {exp.enddate && exp.enddate !== "Present"
+                      {exp.endDate && exp.endDate !== "Present"
                         ? new Date(exp.enddate).toLocaleString("default", {
                             month: "short",
                             year: "numeric",
